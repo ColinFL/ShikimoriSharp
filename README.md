@@ -2,6 +2,7 @@
 
 [![Nuget](https://img.shields.io/nuget/v/ShikimoriSharp)](https://www.nuget.org/packages/ShikimoriSharp/)
 ![.NET Core](https://github.com/JustRoxy/ShikimoriSharp/workflows/.NET%20Core/badge.svg)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FColinFL%2FShikimoriSharp.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FColinFL%2FShikimoriSharp?ref=badge_shield)
 
 # API Documentation
 https://shikimori.one/api/doc/1.0
@@ -47,3 +48,7 @@ foreach (var rel in related)
       Console.WriteLine();
 }
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FColinFL%2FShikimoriSharp.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FColinFL%2FShikimoriSharp?ref=badge_large)
