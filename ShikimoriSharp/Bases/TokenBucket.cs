@@ -11,6 +11,9 @@ namespace ShikimoriSharp.Bases
 
         private readonly Timer _timer;
 
+        public string Name { get; }
+        public int MaxTokens { get; }
+        public double RefreshTime { get; }
         public TokenBucket(string name, int maxTokens, double refreshTime)
         {
             Name = name;
@@ -20,13 +23,9 @@ namespace ShikimoriSharp.Bases
             _timer = new Timer(refreshTime);
             _timer.Elapsed += Refresh;
             _timer.AutoReset = true;
-            _sem = new SemaphoreSlim(0, maxTokens);
-            _sem.Release(maxTokens);
+            _sem = new SemaphoreSlim(0, MaxTokens);
+            _sem.Release(MaxTokens);
         }
-
-        public string Name { get; }
-        public int MaxTokens { get; }
-        public double RefreshTime { get; }
 
         private void Refresh(object sender, ElapsedEventArgs args)
         {
